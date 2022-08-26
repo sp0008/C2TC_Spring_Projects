@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- FOr package com.cg.student-->
+<bean id="s1" class="com.cg.student.Student">
+<constructor-arg name="id" value="1"/>
+<constructor-arg name="name" value="Arya"/>
+</bean>
+<bean id="s2" class="com.cg.student.Student">
+<constructor-arg name="id" value="2"/>
+<constructor-arg name="name" value="Ayan"/>
+</bean>
+
+
+<!-- For package com.cg.college-->
+
+<bean id="MathCheatReference" class="com.cg.college.MathCheat"/>
+<bean id="s3" class="com.cg.college.Students">
+<property name="chit" ref="MathCheatReference"/>
+</bean>
+
+<bean id="s4" class="com.cg.college.AnotherStudent">
+<property name="chit" ref="MathCheatReference"/>
+</bean>
+
+<!--
+<bean id="s3" class="com.cg.college.Students">
+<property name="chit"> <bean class="com.cg.college.MathCheat"/>
+</property>
+</bean>
+<bean id="s4" class="com.cg.college.AnotherStudent">
+<property name="chit">
+<bean class="com.cg.college.MathCheat"/>
+</property>
+</bean>
+-->
+</beans>
