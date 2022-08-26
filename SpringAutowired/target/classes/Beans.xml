@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+<context:annotation-config/>
+       
+       <!-- <bean id="Heart" class="com.cg.human.Heart"/>
+        <bean id="human" class="com.cg.human.Human" autowire="constructor">
+        </bean> -->
+        
+       <!-- <property name="heart"><bean class="com.cg.human.Heart"/>
+        </property>
+        </bean> -->
+        
+      	
+        <bean id="humanHeart" class="com.cg.human.Heart">
+        <property name="animal" value="Human"/>
+        <property name="heartNumber" value="1"/>
+        </bean>
+        
+        <bean id="octopusHeart" class="com.cg.human.Heart">
+         <property name="animal" value="Octopus"/>
+        <property name="heartNumber" value="3"/>
+        </bean>
+        
+        <bean id="dogHeart" class="com.cg.human.Heart">
+        <property name="animal" value="Dog"/>
+        <property name="heartNumber" value="1"/>
+        </bean>
+        
+        <bean id="human" class="com.cg.human.Human"/>
+        
+       
+         
+</beans>
+        
